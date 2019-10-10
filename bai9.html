@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkCharacter(arr, char) {
+        let count = 0;
+        for(let item in arr) {
+            if(arr[item] == char) {
+                count++;
+            }
+        }
+        if(count>0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let num = Number(prompt("Nhập vào số phần tử của mảng"));
+    let arr = [];
+    for(let i = 0; i < num; i++) {
+        let item = prompt("Nhập kí tự thứ " + (i + 1));
+        arr.push(item);
+    }
+    document.write("Mảng kí tự vừa nhập: " + arr.join(" - ") + "<br>");
+    let search = prompt("Nhập vào kí tự cần tìm");
+    if(checkCharacter(arr, search) > 0) {
+        document.write(`Có ${checkCharacter(arr, search)} kí tự ${search} trong mảng`);
+    } else {
+        document.write("Không có kí tự nào trong mảng");
+    }
+</script>
+</body>
+</html>

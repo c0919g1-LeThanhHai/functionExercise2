@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = Number(prompt("Nhập số phần tử trong mảng"));
+    let arr = [];
+     for(let i = 0; i < num; i++) {
+         let item = Number(prompt("Nhập phần tử thứ " + i));
+        arr.push(item);
+     }
+
+     function reverseArray(arr) {
+         let first = 0;
+         let last = arr.length-1;
+         for(let i = 0; i < last; i++) {
+             if(first < last) {
+                 let temp = arr[first];
+                 arr[first] = arr[last];
+                 arr[last] = temp;
+             }
+             first++;
+             last--;
+         }
+         return arr;
+     }
+
+     document.write("Mảng ban đầu là " + arr.join(" - ") + "<br>");
+     document.write("Mảng sau khi đảo ngược là " + reverseArray(arr).join(" - "));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function circuit(num) {
+        return Math.round(2 * num * Math.PI);
+    }
+    function acreage(num) {
+        return Math.round(Math.pow(num,2) * Math.PI);
+    }
+    let radius = Number(prompt("Nhập bán kính hình tròn"));
+    let choose = Number(prompt("1. Tính diện tích hình tròn\n2.Tính chu vi hình tròn"));
+    switch (choose) {
+        case 1:
+            document.write("Diện tích hình tròn với bán kình là " + radius + " bằng " + acreage(radius));
+            break;
+        case 2:
+            document.write("Chu vi hình tròn với bán kính là " + radius + " bằng " + circuit(radius));
+    }
+</script>
+</body>
+</html>
